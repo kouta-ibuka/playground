@@ -6,6 +6,9 @@
     --accent-color: #bf6a7a;
     --back-color: #2b5566;
     --text-bright: #fff;
+    --icon-color: #fff;
+    --icon-bk-color: #ddd;
+    --large-width: 1000px;
 }
 
 /* 基本設定　ページ全体 */
@@ -68,5 +71,186 @@ body{
     
     .conA p{
         font-size: 24px;
+    }
+}
+
+/* コンテンツB */
+.conB .container{
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.conB h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conB p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: .8;
+}
+
+.conB a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.conB a:hover{
+    text-decoration: underline;
+}
+
+.conB .icon{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    width:2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--icon-bk-color);
+    color: var(--icon-color);
+}
+
+.conB .text{
+    text-align: center;
+    padding: 0 20px 60px 20px;
+}
+
+@media (min-width:768px) {
+    .conB .container{
+        display: flex;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+
+    .conB .text{
+        flex:1;
+    }
+}
+
+/* コンテンツC */
+.conC{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.conC .text{
+    padding: 20px;
+}
+
+.conC h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conC p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: .8;
+}
+
+.conC a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: var(--text-bright);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.conC a:hover{
+    background-image: linear-gradient(rgba(225,225,225,0.2),rgba(225,225,225,0.2));
+}
+
+.conC .photo{
+    min-height: 200px;
+    background-image: url(../6step/img/note.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width:768px) {
+    .conC .container{
+        display: flex;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+
+    .conC .photo{
+        flex:3;
+    }
+
+    .conC .text{
+        flex: 2;
+        padding: 50px;
+    }
+}
+
+/* コンテンツD */
+.conD .text{
+    padding: 20px;
+}
+
+.conD h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.conD p{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: .8;
+}
+
+.conD a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    background-color: var(--accent-color);
+    color: var(--text-bright);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.conD a:hover{
+    background-image: linear-gradient(rgba(225,225,225,0.2),rgba(225,225,225,0.2));
+}
+
+.conD .photo{
+    min-height: 200px;
+    background-image: url(../6step/img/life.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width:768px) {
+    .conD .container{
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: var(--large-width);
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    .conD .photo{
+        flex:0 0 400px;
+    }
+
+    .conD .text{
+        flex: 1;
+        padding: 50px;
     }
 }
