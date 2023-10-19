@@ -254,3 +254,227 @@ body{
         padding: 50px;
     }
 }
+
+/* フッター */
+footer{
+    color: #fff;
+    background-color: #2b5566;
+}
+
+footer .container{
+    padding: 40px 20px;
+}
+
+.footA h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2rem;
+}
+
+.footA p{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.footA a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.footA{
+    margin-bottom: 30px;
+}
+
+/* フッターメニュー */
+.footB div{
+    margin-bottom: 20px;
+}
+.footB h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom:solid 1px currentColor ;
+    font-size: 14px;
+}
+
+.footB ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footB a{
+    display: block;
+    padding: 5px;
+    color:inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footB a:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+@media (min-width:768px) {
+    footer .container{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+
+    .footA{
+        flex: 0 0 40%;
+    }
+
+    .footB{
+        display: flex;
+        flex:0 0 60%;
+    }
+
+    .footC{
+        flex:1;
+    }
+
+    .footB div{
+        flex: 1;
+    }
+
+    .footB div:not(:first-child){
+        margin-left: 40px;
+    }
+}
+
+/* コピーライト */
+.footC{
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* snslogo */
+
+.footD{
+    margin-top: 20px;
+}
+
+.footD ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footD a{
+    display: block;
+    margin-right: 8px;
+    padding: 0;
+    color: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    border: solid 1px currentColor;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.footD a:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+/* header */
+header{
+    position:absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: rgba(225, 225, 225, 0.9);
+}
+
+.headA{
+    display: inline-block;
+    line-height: 70px;
+    padding: 0 20px;
+    background-color: var(--main-color);
+    color: var(--text-bright);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* footB */
+.headB ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.headB a{
+    display: block;
+    color: inherit;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.headB a:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+@media (min-width:768px) {
+    header .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+
+    .headB ul{
+        display: flex;
+        gap:20px
+    }
+}
+
+@media (max-width:768px) {
+    header .container-small{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .headC{
+        margin-right: 10px;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 28px;
+        opacity: 0.5;
+    }
+
+    .headC:hover{
+        opacity: 0.3;
+    }
+
+    .headB{
+        display: none;
+    }
+
+    .headB.active{
+        display: block;
+    }
+}
+
+@media (min-width:768px) {
+    .headC{
+        display: none;
+    }
+
+    .headB{
+        display: block !important;
+    }
+}
