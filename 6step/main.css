@@ -9,6 +9,7 @@
     --icon-color: #fff;
     --icon-bk-color: #ddd;
     --large-width: 1000px;
+    --middle-width:800px;
 }
 
 /* 基本設定　ページ全体 */
@@ -477,4 +478,195 @@ header{
     .headB{
         display: block !important;
     }
+}
+
+/* content.htmlここから */
+@media (max-width:599px) {
+    :root{
+        font-size: 14px;
+    }
+}
+
+@media (min-width:600px) and (max-width:799px) {
+    :root{
+        font-size:16px;
+    }
+}
+
+@media (min-width:800px) {
+    :root{
+        font-size: 18px;
+    }
+}
+
+.nohero header{
+    position:static;
+    border-bottom: solid 1px #ddd;
+}
+
+.post .container{
+    max-width: var(--middle-width);
+    margin: 0 auto;
+    padding: 30px 10px;
+}
+
+.post h1{
+    padding-left: 0.5rem;
+    border-left: solid 0.75rem #bf6a7a;
+    font-size: 2rem;
+}
+
+.post p{
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.post img{
+    max-width: 100%;
+}
+
+.bread ol{
+    display: flex;
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.bread a{
+    padding: 5px;
+    color: inherit;
+    font-size: 0.875rem;
+    text-decoration: none;    
+}
+
+.bread a::after{
+    margin-left: 10px;
+    content:"";
+    font-family: 'FontAwesome';
+    opacity: 0.3;
+}
+
+.bread a:hover{
+    background-color: rgba(0, 0, 0, 0.3 );
+}
+
+/* ABOUTページ */
+.history{
+    background-color: var(--main-color);
+    color: var(--text-bright);
+}
+
+.history .text{
+    padding: 20px;
+}
+
+.history h2{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.history .photo{
+    min-height: 300px;
+    background-image: url(./img/plant.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.history table{
+    border-collapse: collapse;
+    border-top: solid 1px #ddd;
+    font-size: 0.875rem;
+}
+
+.history th,
+.history td{
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    border-bottom: solid 1px #ddd;
+}
+
+.history th{
+    padding-right: 1rem;
+    text-align: left;
+    word-break: keep-all;
+}
+
+@media (min-width:768px) {
+    .history .container{
+        display: flex;
+        max-width: var(--large-width);
+        margin: 0 auto;
+    }
+
+    .history .photo{
+        flex: 3;
+    }
+
+    .history .text{
+        flex: 2;
+        padding: 50px;
+    }
+}
+
+/* お問い合わせページ */
+.contact{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: solid 1px #ddd;
+    text-align: center;
+}
+
+.contact i{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    width:2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--main-color);
+    color: var(--icon-color);
+}
+
+.contact h2{
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.contact a{
+    font-size: 1.4rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+@media (min-width:768px){
+    .contact-wrap{
+        display: flex;
+    }
+
+    .contact{
+        flex: 1;
+    }
+
+    .contact:first-child{
+        margin-right: 20px;
+    }
+}
+
+/* 問い合わせページの地図 */
+.location iframe{
+    width: 100%;
+    height: 400px;
+    vertical-align: bottom;
+}
+
+.location h2{
+    margin: 0;
+    padding: 20px 0;
+    background-color: var(--main-color);
+    color: var(--text-bright);
+    font-size: 1.5rem;
+    text-align: center;
 }
